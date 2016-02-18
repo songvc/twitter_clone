@@ -5,7 +5,7 @@ var db = new (require('locallydb'))('./.data');
 var chirps = db.collection('chirps');
 
 router.route('/api/chirps')
-  .all(login.required);
+  .all(login.required)
   .get(function(req, res){
     res.json(chirps.toArray());
   })
