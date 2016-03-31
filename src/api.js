@@ -2,7 +2,7 @@ var actions = require('./actions');
 
 var API = module.exports = {
   fetchChirps: function() {
-    get('/api/chirps').then(actions.gotChirps(json).bind(actions))
+    get('/api/chirps').then(actions.gotChirps().bind(actions))
   }
 }
 
